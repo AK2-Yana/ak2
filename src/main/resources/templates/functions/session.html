@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Session</title>
+</head>
+<body>
+<h1>Session Check</h1>
+<form method="post" action="/session" th:action="@{/session}">
+	<div>
+		<input type="text" name="sessionValue" placeholder="Value"/>
+	</div>
+	<div>
+		<input type="submit" value="Submit"/>
+	</div>
+</form>
+<p th:text="${page?.sessionValue}"></p>
+</body>
+</html>
