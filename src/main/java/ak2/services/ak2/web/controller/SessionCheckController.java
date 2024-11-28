@@ -20,30 +20,30 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/session")
 public class SessionCheckController {
-    @Autowired
-    SessionService<SessionForm> sessionService;
+  @Autowired
+  SessionService<SessionForm> sessionService;
 
-    @Autowired
-    NewUserService newUserService;
+  @Autowired
+  NewUserService newUserService;
 
-    @Autowired
-    SessionHelper sessionHelper;
+  @Autowired
+  SessionHelper sessionHelper;
 
-    @GetMapping
-    public Ak2ModelAndView index(
-            HttpSession httpSession
-    ) {
-        Optional<SessionForm> sessionInfo = sessionService.getSession(SessionEnum.SESSION_ENUM.getKey(), httpSession);
-        return sessionInfo.map(sessionForm -> new Ak2ModelAndView("/functions/session", sessionForm))
-                .orElseGet(() -> new Ak2ModelAndView("/functions/session"));
-    }
+  @GetMapping
+  public Ak2ModelAndView index(
+      HttpSession httpSession
+  ) {
+    Optional<SessionForm> sessionInfo = sessionService.getSession(SessionEnum.SESSION_ENUM.getKey(), httpSession);
+    return sessionInfo.map(sessionForm -> new Ak2ModelAndView("/functions/session", sessionForm))
+        .orElseGet(() -> new Ak2ModelAndView("/functions/session"));
+  }
 
-    @PostMapping
-    public Ak2RedirectView setSession(
-            @ModelAttribute SessionForm session,
-            HttpSession httpSession
-    ) {
-        sessionService.setSession(SessionEnum.SESSION_ENUM.getKey(), session, httpSession);
-        return sessionHelper.redirectToSession();
-    }
+  @PostMapping
+  public Ak2RedirectView setSession(
+      @ModelAttribute SessionForm session,
+      HttpSession httpSession
+  ) {
+    sessionService.setSession(SessionEnum.SESSION_ENUM.getKey(), session, httpSession);
+    return sessionHelper.redirectToSession();
+  }
 }

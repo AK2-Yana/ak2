@@ -8,6 +8,7 @@ public abstract class Ak2Helper {
 
     //TODO: To transfer Error Page
 
+
     public Ak2RedirectView redirectToSecurePageWithSeeOther(String path) {
         return new Ak2RedirectView(path);
     }
