@@ -1,12 +1,12 @@
-package ak2.services.ak2.web.controller;
+package ak2.services.ak2.web.session.controller;
 
-import ak2.services.ak2.common.Ak2ModelAndView;
-import ak2.services.ak2.common.Ak2RedirectView;
 import ak2.services.ak2.common.SessionService;
-import ak2.services.ak2.web.dto.SessionForm;
-import ak2.services.ak2.web.enums.SessionEnum;
-import ak2.services.ak2.web.helpers.SessionHelper;
-import ak2.services.ak2.web.services.NewUserService;
+import ak2.services.ak2.common.view.Ak2ModelAndView;
+import ak2.services.ak2.common.view.Ak2RedirectView;
+import ak2.services.ak2.web.login.services.NewUserService;
+import ak2.services.ak2.web.session.dto.SessionForm;
+import ak2.services.ak2.web.session.enums.SessionEnum;
+import ak2.services.ak2.web.session.helper.SessionHelper;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,13 +1,13 @@
-package ak2.services.ak2.web.dto;
+package ak2.services.ak2.web.login.dto;
 
 import ak2.services.ak2.domain.annotations.CheckUsername;
 import jakarta.validation.constraints.NotEmpty;
 
 public record UserForm(
-        @CheckUsername
-        String username,
+    @CheckUsername
+    String username,
 
-        @NotEmpty
-        String password
+    @NotEmpty
+    String password
 ) {
 }
