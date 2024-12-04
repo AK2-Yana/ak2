@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Confirm</title>
+</head>
+<body>
+<div>
+	<h1>Confirm</h1>
+	<p th:text="${page?.sessionForm.sessionValue}"></p>
+	<form method="post" action="/session/check" th:action="@{/session/check}">
+		<input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+		<input type="hidden" name="_csrf_header" th:value="${_csrf.headerName}"/>
+		<div>
+			<input type="submit" value="Submit"/>
+		</div>
+	</form>
+</div>
+</body>
+</html>

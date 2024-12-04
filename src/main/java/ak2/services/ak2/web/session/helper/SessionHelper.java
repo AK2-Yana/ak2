@@ -6,7 +6,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class SessionHelper {
 
-  public Ak2RedirectView redirectToSession() {
+  public Ak2RedirectView redirectToSessionForm() {
     return new Ak2RedirectView("/ak2/session");
+  }
+
+  public Ak2RedirectView redirectToConfirmPage() {
+    return new Ak2RedirectView("/ak2/session/check");
+  }
+
+  public Ak2RedirectView redirectToCompletePage() {
+
+    return new Ak2RedirectView("/ak2/session/complete");
   }
 }

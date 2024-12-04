@@ -7,6 +7,7 @@
 <body>
 <h1>Session Check</h1>
 <form method="post" action="/session" th:action="@{/session}">
+	<input type="hidden" name="csrf" th:value="${page.csrf}"/>
 	<div>
 		<input type="text" name="sessionValue" placeholder="Value"/>
 	</div>
@@ -14,6 +15,6 @@
 		<input type="submit" value="Submit"/>
 	</div>
 </form>
-<p th:text="${page?.sessionValue}"></p>
+<p th:text="${page.sessionForm?.sessionValue}"></p>
 </body>
 </html>
