@@ -9,6 +9,7 @@ import java.util.Base64;
 public class CsrfService {
 
   public boolean compareCsrfToken(String currentCsrf, String sessionCsrf) {
+    if (sessionCsrf.isEmpty()) return false;
     return currentCsrf.equals(sessionCsrf);
   }
 

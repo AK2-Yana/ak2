@@ -35,9 +35,9 @@ spring:
     store-type: redis
     redis:
       flush-mode: on-save
-#      namespace: ak2-session
+  #      namespace: ak2-session
   datasource:
-    url: jdbc:postgresql://127.0.0.1:13306/ak2
+    url: jdbc:postgresql://127.0.0.1:13306/ak2?characterEncoding=utf8&useSSL=false"
     username: docker
     password: docker
     continue-on-error: true
