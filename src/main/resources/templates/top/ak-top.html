@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="https://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>ak2 top page</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" type="text/css" href="//ak2.styles.jp.local/css/sample.css">
 </head>
 <body>
 <div>
-	<h1 data-top="h1">Top page</h1>
+	<!--	This is just sample how to include virtual module from ssl-->
+	<!-- #include virtual="/common/inc/header.html" -->
+	<th:block th:include="/common/inc/header :: header"></th:block>
+	<h2 data-top="h1">Top page h2</h2>
 </div>
 </body>
 </html>
