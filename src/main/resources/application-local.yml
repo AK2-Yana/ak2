@@ -5,6 +5,8 @@ server:
     context-path: /ak2
 ## Setting for DB
 spring:
+  active:
+    profile: local
   jpa:
     hibernate:
       ddl-auto: none

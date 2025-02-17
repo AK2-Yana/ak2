@@ -3,14 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ak2 top page</title>
-	<link rel="stylesheet" type="text/css" href="//ak2.styles.jp.local/css/sample.css">
+	<link rel="stylesheet" type="text/css" href="//ak2.styles.jp.local/css/common.css">
 </head>
 <body>
 <div>
 	<!--	This is just sample how to include virtual module from ssl-->
 	<!-- #include virtual="/common/inc/header.html" -->
+
+	<!-- Start Common Header-->
 	<th:block th:include="/common/inc/header :: header"></th:block>
+	<!--	End Common Header-->
+
+	<!--	Start Common Side Menu-->
+	<th:block th:include="/common/inc/side-menu :: side-menu"></th:block>
+	<!--	End Common Side Menu-->
+
 	<h2 data-top="h1">Top page h2</h2>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.4.38"></script>
 </body>
 </html>
